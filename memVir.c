@@ -3,6 +3,9 @@
 #include <signal.h>
 #include <unistd.h>
 
+// para compilar -> gcc -o a memVir.c
+// para executar -> ./a
+
 static volatile int keepRunning = 1;
 
 void intHandler(int dummy){
