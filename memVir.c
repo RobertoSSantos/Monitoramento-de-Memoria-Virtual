@@ -27,24 +27,23 @@ int main(){
 
     int vmSize;
     int vmRSS;
-    fscanf(f, "%d %d", &vmSize, &vmRSS);
 
-    printf("Numero de paginas da memoria real: %d\n", vmRSS);
-    printf("Tamanho Total memoria Virtual = %d\n", vmSize);
-    printf("O tamanho das paginas virtuais: %ld\n", sysconf(_SC_PAGE_SIZE));
+    signal(SIGINT, intHandler);
+
+    while (keepRunning)
+    {
+        fscanf(f, "%d %d", &vmSize, &vmRSS);
+
+        printf("Numero de paginas da memoria real: %d\n", vmRSS);
+        printf("Tamanho Total memoria Virtual = %d\n", vmSize);
+        printf("O tamanho das paginas virtuais: %ld\n", sysconf(_SC_PAGE_SIZE));
+
+        printf("\n\n Pressione Cntrl+C para parar o programa \n");
+        sleep(1);
+        system("clear");
+    }
 
     fclose(f);
-
-    //signal(SIGINT, intHandler);
-
-    // while (keepRunning)
-    // {
-    //     printf("Numero de paginas memoria RAM: \n");
-    //     printf("Tamanho total da memoria virtual: \n");
-    //     printf("Tamanho das paginas virtuais: \n");
-
-    //     printf("\n\n Pressione Cntrl+C para parar o programa \n");
-    // }
 
     return 0;
     
