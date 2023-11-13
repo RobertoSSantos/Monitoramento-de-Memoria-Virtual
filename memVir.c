@@ -1,3 +1,4 @@
+// Equipe: Alexandre Delraso, Pedro Martins, Roberto Santos
 #include <stdio.h>
 #include <stdlib.h>
 #include <signal.h>
