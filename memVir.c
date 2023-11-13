@@ -1,4 +1,4 @@
-// Equipe: Alexandre Delraso, Pedro Martins, Roberto Santos
+// Equipe: Alexandre Delraso, Pedro Martins, Roberto Santos 
 #include <stdio.h>
 #include <stdlib.h>
 #include <signal.h>
@@ -52,7 +52,7 @@ int main(){
     // Enquanto nao for utilizado o comando de parada (cntrl+c) continuara a repetir a execucao
     while (keepRunning)
     {
-        // le os dados do arquivo proc/[PID]/statm
+        // le os dados do arquivo proc/[PID]/statm  
         fscanf(f, "%f %f", &vmSize, &vmRSS);
 
         printf("Tamanho da memoria real que esta sendo usada: %.2f KB\n", vmRSS);
